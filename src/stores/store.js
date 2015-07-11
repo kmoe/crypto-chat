@@ -1,7 +1,8 @@
 import {
   MESSAGE_INPUT_CHANGED,
   NAME_INPUT_CHANGED,
-  SEND_BUTTON_CLICKED
+  SEND_BUTTON_CLICKED,
+  SERVER_PUSHED_NEW_MESSAGE
 } from '../constants/action-types';
 
 const initialState = {
@@ -36,13 +37,24 @@ export default function messages(state = initialState, action) {
 
     case SEND_BUTTON_CLICKED:
       return {
-        messages: [...state.messages, {
-          text: state.messageInput,
-          name: state.nameInput
+        messages: [
+          ...state.messages, {
+            text: state.messageInput,
+            name: state.nameInput
         }],
         nameInput: '',
         messageInput: ''
       };
+
+      case SERVER_PUSHED_NEW_MESSAGE:
+        return {
+          messages: [
+            ...state.messages,
+            action.message
+          ],
+          nameInput: state.nameInput,
+          messageInput: state.messageInput
+        };
 
     default:
       return state;

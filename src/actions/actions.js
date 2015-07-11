@@ -19,3 +19,10 @@ export function sendButtonClicked() {
     type: types.SEND_BUTTON_CLICKED
   };
 }
+
+export function serverPushedNewMessage(message) {
+  return {
+    type: types.SERVER_PUSHED_NEW_MESSAGE,
+    message
+  };
+}
