@@ -1,0 +1,17 @@
+body {
+  color: rgb(51, 51, 51);
+}
+
+input {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.pure-button-primary {
+  background: rgb(28, 184, 65);
+}
