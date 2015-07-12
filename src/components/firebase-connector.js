@@ -1,22 +1,32 @@
 import React, {
   Component
 } from 'react';
+import _ from 'lodash';
 import * as actions from '../actions/actions';
 const Firebase = require('firebase');
 
+const firebaseRef = new Firebase('https://blinding-fire-7202.firebaseio.com/chat');
+
 export default class FirebaseConnector extends Component {
 
-  constructor(props) {
-    super(props);
-    this.dispatch = props.dispatch;
+  componentWillMount() {
+    firebaseRef.on('child_added', function(snapshot){
+      this.props.dispatch(actions.serverPushedNewMessage(snapshot.val()));
+    }.bind(this));
   }
 
-  componentWillMount() {
-    const firebaseRef = new Firebase('https://blinding-fire-7202.firebaseio.com/chat');
+  componentDidUpdate() {
+    const dispatch = this.props.dispatch;
+    if(this.props.pendingMessages.length) {
+      _.each(this.props.pendingMessages, function(message) {
+        firebaseRef.push(message);
+        dispatch(actions.clientPushedNewMessage());
+      });
+    }
+  }
 
-    firebaseRef.on('child_added', function(snapshot){
-      this.dispatch(actions.serverPushedNewMessage(snapshot.val()));
-    }.bind(this));
+  componentWillUnmount() {
+    firebaseRef.off('child_added');
   }
 
   render() {

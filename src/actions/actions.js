@@ -26,3 +26,9 @@ export function serverPushedNewMessage(message) {
     message
   };
 }
+
+export function clientPushedNewMessage() {
+  return {
+    type: types.CLIENT_PUSHED_NEW_MESSAGE
+  };
+}

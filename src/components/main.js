@@ -14,6 +14,7 @@ import {
 
 @connect(state => ({
   messages: state.default.messages,
+  pendingMessages: state.default.pendingMessages,
   nameInput: state.default.nameInput,
   messageInput: state.default.messageInput
 }))
@@ -22,7 +23,8 @@ export default class Main extends Component {
   render() {
     return (
       <FirebaseConnector
-        dispatch={this.props.dispatch}>
+        dispatch={this.props.dispatch}
+        pendingMessages={this.props.pendingMessages}>
         <div
           className="pure-g">
           <div
