@@ -1,6 +1,6 @@
 {
   "name": "crypto-chat",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Encrypted chat implemented using the Web Crypto API and Redux.",
   "scripts": {
     "start": "node server.js",
