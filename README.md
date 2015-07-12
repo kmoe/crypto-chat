@@ -10,5 +10,5 @@ Seeded from [react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerp
 ```
 npm install
 npm start
-open http://localhost:3000
+open http://localhost:3000/static/index.html
 ```
