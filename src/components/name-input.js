@@ -8,6 +8,7 @@ export default class NameInput extends Component {
       <input
         id="name-input"
         type="text"
+        maxLength="70"
         onChange={(e) => this.props.onChange(e.target.value)}
         value={this.props.value} />
     );
