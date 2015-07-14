@@ -1,19 +1,24 @@
 import React from 'react';
 import Main from './main.js';
 import {
-  createRedux
+  createStore,
+  applyMiddleware,
+  combineReducers
 } from 'redux';
+import thunk from 'redux-thunk';
 import {
   Provider
-} from 'redux/react';
-import * as messages from '../stores/store';
+} from 'react-redux';
+import * as reducers from '../reducers/reducer';
 
-const redux = createRedux(messages);
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const reducer = combineReducers(reducers);
+const store = createStoreWithMiddleware(reducer);
 
 export default class App {
   render() {
     return (
-      <Provider redux={redux}>
+      <Provider store={store}>
         {() => <Main />}
       </Provider>
     );

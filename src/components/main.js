@@ -10,7 +10,7 @@ import {
 import * as actions from '../actions/actions';
 import {
   connect
-} from 'redux/react';
+} from 'react-redux';
 
 @connect(state => ({
   messages: state.default.messages,

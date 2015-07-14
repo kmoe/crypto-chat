@@ -29,9 +29,11 @@
     "gh-pages": "^0.3.1",
     "lodash": "^3.10.0",
     "purecss": "^0.6.0",
-    "react": "^0.13.0",
+    "react": "^0.13.3",
     "react-hot-loader": "^1.2.7",
-    "redux": "^0.12.0",
+    "redux-thunk": "^0.1.0",
+    "react-redux": "^0.2.1",
+    "redux": "^1.0.0-rc",
     "style-loader": "^0.12.3",
     "webpack": "^1.9.6",
     "webpack-dev-server": "^1.8.2"
