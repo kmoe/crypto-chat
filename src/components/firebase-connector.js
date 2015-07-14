@@ -5,7 +5,7 @@ import _ from 'lodash';
 import * as actions from '../actions/actions';
 const Firebase = require('firebase');
 
-const firebaseRef = new Firebase('https://blinding-fire-7202.firebaseio.com/chat');
+const firebaseRef = new Firebase('https://cypto-chat.firebaseio.com/chat');
 
 export default class FirebaseConnector extends Component {
 
