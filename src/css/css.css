@@ -12,6 +12,18 @@ dt {
   margin-top: 18px;
 }
 
+.content {
+  max-width: 55em;
+  padding-left: 15em;
+}
+
+@media all and (max-width: 65em) {
+  .content {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
 .pure-button-primary {
   background: rgb(28, 184, 65);
 }

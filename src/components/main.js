@@ -26,26 +26,16 @@ export default class Main extends Component {
         dispatch={this.props.dispatch}
         pendingMessages={this.props.pendingMessages}>
         <div
-          className="pure-g">
-          <div
-            className="pure-u-1-5"/>
-          <div
-            className="pure-u-4-5">
+          className="content">
             <h1>
               Crypto chat
             </h1>
             <MessagePanel
               messages={this.props.messages} />
-            </div>
-          <div
-            className="pure-u-1-5"/>
-          <div
-            className="pure-u-4-5">
             <Form
               messageInput={this.props.messageInput}
               nameInput={this.props.nameInput}
               {...bindActionCreators(actions, this.props.dispatch)} />
-          </div>
         </div>
       </FirebaseConnector>
     );
