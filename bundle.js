@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "bd760e7c30d17093f03b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f5041cf70110737ba809"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1863,7 +1863,7 @@
 /* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
-	eval("exports = module.exports = __webpack_require__(217)();\n// imports\n\n\n// module\nexports.push([module.id, \"body {\\n  color: rgb(51, 51, 51);\\n}\\n\\ninput {\\n  margin-right: 10px;\\n  margin-left: 10px;\\n}\\n\\ndt {\\n  font-weight: bold;\\n  margin-top: 18px;\\n}\\n\\n.content {\\n  max-width: 55em;\\n  padding-left: 15em;\\n}\\n\\n@media all and (max-width: 65em) {\\n  .content {\\n    padding-left: 2em;\\n    padding-right: 2em;\\n  }\\n}\\n\\n.pure-button-primary {\\n  background: rgb(28, 184, 65);\\n}\\n\", \"\"]);\n\n// exports\n\n\n/*****************\n ** WEBPACK FOOTER\n ** ./~/css-loader!./src/css/css.css\n ** module id = 221\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/css/css.css?./~/css-loader");
+	eval("exports = module.exports = __webpack_require__(217)();\n// imports\n\n\n// module\nexports.push([module.id, \"body {\\n  color: rgb(51, 51, 51);\\n}\\n\\ninput {\\n  margin-right: 10px;\\n  margin-left: 10px;\\n}\\n\\ndt {\\n  font-weight: bold;\\n  margin-top: 18px;\\n}\\n\\n.content {\\n  max-width: 55em;\\n  padding-left: 15em;\\n}\\n\\n@media all and (max-width: 65em) {\\n  .content {\\n    font-size: 5.9vw;\\n    padding-left: 2em;\\n    padding-right: 2em;\\n  }\\n}\\n\\n@media all and (min-width: 30em) and (max-width: 65em) {\\n  .content {\\n    font-size: 3vw;\\n  }\\n}\\n\\n.pure-button-primary {\\n  background: rgb(28, 184, 65);\\n}\\n\", \"\"]);\n\n// exports\n\n\n/*****************\n ** WEBPACK FOOTER\n ** ./~/css-loader!./src/css/css.css\n ** module id = 221\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/css/css.css?./~/css-loader");
 
 /***/ }
 /******/ ]);
