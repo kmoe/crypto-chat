@@ -19,8 +19,15 @@ dt {
 
 @media all and (max-width: 65em) {
   .content {
+    font-size: 5.9vw;
     padding-left: 2em;
     padding-right: 2em;
+  }
+}
+
+@media all and (min-width: 30em) and (max-width: 65em) {
+  .content {
+    font-size: 3vw;
   }
 }
 
