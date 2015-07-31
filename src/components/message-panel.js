@@ -1,38 +1,32 @@
 import React, {
   Component
 } from 'react';
-import _ from 'lodash';
 import MessageName from './message-name';
 import MessageText from './message-text';
-
-//input [1, 2, 3]
-//output [1, 1, 2, 2, 3, 3]
-function _piecewiseDuplicate(array) {
-  return _.flatten(_.map(array, function(value) {
-    return _.fill([0, 0], value);
-  }));
-}
 
 export default class MessagePanel extends Component {
 
   render() {
+    const messages = this.props.messages;
 
-    //we can't do this the easy way as <dl>s can't have anything but <dt> and
-    //<dd> as children, and JSX does not permit adjacent elements with no
-    //enclosing element
-    const piecewiseDuplicatedMessages = _piecewiseDuplicate(this.props.messages);
     return (
-      <dl>
-         {piecewiseDuplicatedMessages.map(function(message, index) {
-            return index % 2
-              ? <MessageText
+      <ol role="log" aria-relevant="additions">
+         {messages.map(function(message, index) {
+            const ariaLive = index === messages.length - 1 ? 'assertive' : undefined;
+
+            return (
+              <li
+                aria-live={ariaLive}>
+               <MessageName
+                  key={index + 100}
+                  name={message.name} />
+                <MessageText
                   key={index}
                   text={message.text} />
-              : <MessageName
-                  key={index}
-                  name={message.name} />;
+                </li>
+              );
           })}
-      </dl>
+      </ol>
     );
   }
 }

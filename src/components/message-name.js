@@ -5,9 +5,10 @@ import React, {
 export default class MessageName extends Component {
   render() {
     return (
-      <dt>
+      <span
+        className="message-name">
         {this.props.name}
-      </dt>
+      </span>
     );
   }
 }

@@ -5,9 +5,9 @@ import React, {
 export default class MessageText extends Component {
   render() {
     return (
-      <dd>
+      <span>
         {this.props.text}
-      </dd>
+      </span>
     );
   }
 }

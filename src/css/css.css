@@ -7,8 +7,13 @@ input {
   margin-left: 10px;
 }
 
-dt {
-  font-weight: bold;
+ol {
+  list-style-type: none;
+  display: inline-block;
+  margin-top: 0;
+}
+
+li {
   margin-top: 18px;
 }
 
@@ -33,4 +38,9 @@ dt {
 
 .pure-button-primary {
   background: rgb(28, 184, 65);
+}
+
+.message-name {
+  font-weight: bold;
+  margin-right: 22px;
 }
