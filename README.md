@@ -7,10 +7,17 @@ Seeded from [react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerp
 
 *N.B. This example is heavily under construction and will not be stable for a while. The live demo is for entertainment purposes only.*
 
-### Usage
+### Local development
 
 ```
 npm install
 npm start
 open http://localhost:3000/static/index.html
+```
+
+### Deploying to GitHub Pages
+
+```
+npm run gh-pages
+npm run deploy-gh-pages
 ```
