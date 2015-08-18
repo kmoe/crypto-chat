@@ -5,7 +5,7 @@ Encrypted chat implemented using the [Web Crypto API](http://www.w3.org/TR/WebCr
 
 Seeded from [react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate). The rest is mine, with thanks to the [Reactiflux](http://www.reactiflux.com/) community for their help.
 
-*N.B. This example is heavily under construction and will not be stable for a while. The live demo is for entertainment purposes only.*
+*N.B. This example is heavily under construction and will not be stable for a while. The live demo is for entertainment purposes only. In particular, nothing is getting encrypted yet.*
 
 ### Local development
 
