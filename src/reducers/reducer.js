@@ -25,24 +25,17 @@ export default function messages(state = initialState, action) {
   switch(action.type) {
 
     case MESSAGE_INPUT_CHANGED:
-      return {
-        messages: state.messages,
-        pendingMessages: state.pendingMessages,
-        nameInput: state.nameInput,
+      return Object.assign({}, state, {
         messageInput: action.text
-      };
+      });
 
     case NAME_INPUT_CHANGED:
-      return {
-        messages: state.messages,
-        pendingMessages: state.pendingMessages,
-        nameInput: action.text,
-        messageInput: state.messageInput
-      };
+      return Object.assign({}, state, {
+        nameInput: action.text
+      });
 
     case SEND_BUTTON_CLICKED:
-      return {
-        messages: state.messages,
+      return Object.assign({}, state, {
         pendingMessages: [
           ...state.pendingMessages, {
             text: state.messageInput,
@@ -50,30 +43,24 @@ export default function messages(state = initialState, action) {
         }],
         nameInput: '',
         messageInput: ''
-      };
+      });
 
       case SERVER_PUSHED_NEW_MESSAGE:
         const stateMessages = state.messages;
         const messagesLength = stateMessages.length;
         const sliceStart = messagesLength > 5 ? messagesLength - 5 : 0;
         const lastSixMessages = _.slice(stateMessages, sliceStart, messagesLength);
-        return {
+        return Object.assign({}, state, {
           messages: [
             ...lastSixMessages,
             action.message
-          ],
-          pendingMessages: state.pendingMessages,
-          nameInput: state.nameInput,
-          messageInput: state.messageInput
-        };
+          ]
+        });
 
       case CLIENT_PUSHED_NEW_MESSAGE:
-        return {
-          messages: state.messages,
-          pendingMessages: [],
-          nameImput: state.nameInput,
-          messageInput: state.messageInput
-        };
+        return Object.assign({}, state, {
+          pendingMessages: []
+        });
 
     default:
       return state;
